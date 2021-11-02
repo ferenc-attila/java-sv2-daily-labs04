@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Movie {
 
-    String title;
-    int yearOfRelease;
-    List<Actor> actors = new ArrayList<>();
+    private String title;
+    private int yearOfRelease;
+    private List<Actor> actors = new ArrayList<>();
 
     public Movie(String title, int yearOfRelease) {
         this.title = title;
@@ -21,7 +21,8 @@ public class Movie {
     public int actorsInTheirTwenties() {
         int count = 0;
         for (Actor actor : actors) {
-            if (yearOfRelease - actor.getYearOfBirth() >= 20 && yearOfRelease - actor.getYearOfBirth() < 30) {
+            int age = yearOfRelease - actor.getYearOfBirth();
+            if ( age >= 20 && age < 30) {
                 count++;
             }
         }

@@ -2,8 +2,8 @@ package day01;
 
 public class Actor {
 
-    String name;
-    int yearOfBirth;
+    private String name;
+    private int yearOfBirth;
 
     public Actor(String name, int yearOfBirth) {
         this.name = name;
